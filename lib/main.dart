@@ -1,3 +1,4 @@
+import 'package:breakpoint/widgets/title.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,6 +21,10 @@ class MyApp extends StatelessWidget {
             backgroundColor: Color(
               0xFF181818,
             ),
-            body: Column()));
+            body: Column(
+              children: [
+                TitleWidget(title: "플레이리스트"),
+              ],
+            )));
   }
 }
