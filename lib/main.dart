@@ -17,11 +17,18 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const Scaffold(
-            backgroundColor: Color(
+        home: Scaffold(
+            appBar: AppBar(
+              title: const Text(
+                'BreakPoint',
+                style: TextStyle(color: Colors.blue),
+              ), // 앱바 제목
+              backgroundColor: Colors.white, // 앱바 배경색
+            ),
+            backgroundColor: const Color(
               0xFF181818,
             ),
-            body: Column(
+            body: const Column(
               children: [
                 TitleWidget(title: "플레이리스트"),
               ],
