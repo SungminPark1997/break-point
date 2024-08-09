@@ -1,3 +1,4 @@
+import 'package:breakpoint/widgets/content_list.dart';
 import 'package:breakpoint/widgets/title.dart';
 import 'package:flutter/material.dart';
 
@@ -17,21 +18,21 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Scaffold(
-            appBar: AppBar(
-              title: const Text(
-                'BreakPoint',
-                style: TextStyle(color: Colors.blue),
-              ), // 앱바 제목
-              backgroundColor: Colors.white, // 앱바 배경색
-            ),
-            backgroundColor: const Color(
+        home: const Scaffold(
+            backgroundColor: Color(
               0xFF181818,
             ),
-            body: const Column(
-              children: [
-                TitleWidget(title: "플레이리스트"),
-              ],
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  TitleWidget(title: "플레이리스트"),
+                  ContentList(),
+                  TitleWidget(title: "최근에 들은 곡"),
+                  ContentList(),
+                  TitleWidget(title: "플레이리스트"),
+                  ContentList(),
+                ],
+              ),
             )));
   }
 }

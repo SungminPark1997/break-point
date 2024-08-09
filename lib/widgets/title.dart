@@ -10,6 +10,10 @@ class TitleWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        const Divider(
+          color: Colors.white, // 경계선의 색상
+          thickness: 2, // 경계선의 두께
+        ),
         Row(
           children: [
             const SizedBox(
