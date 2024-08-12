@@ -1,4 +1,5 @@
 import 'package:breakpoint/widgets/content_list.dart';
+import 'package:breakpoint/widgets/header.dart';
 import 'package:breakpoint/widgets/title.dart';
 import 'package:flutter/material.dart';
 
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
             body: SingleChildScrollView(
               child: Column(
                 children: [
+                  HeaderWidget(),
                   TitleWidget(title: "플레이리스트"),
                   ContentList(),
                   TitleWidget(title: "최근에 들은 곡"),
