@@ -1,3 +1,4 @@
+import 'package:breakpoint/widgets/add_song.dart';
 import 'package:flutter/material.dart';
 
 class HeaderWidget extends StatelessWidget {
@@ -12,7 +13,10 @@ class HeaderWidget extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: IconButton(
             onPressed: () {
-              // 버튼이 눌렸을 때 실행할 동작
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AddSong()),
+              );
             },
             icon: const Icon(
               Icons.add,
