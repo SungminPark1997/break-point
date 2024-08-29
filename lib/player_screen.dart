@@ -68,6 +68,11 @@ class _PlayerScreenState extends State<PlayerScreen> {
     });
   }
 
+  void _pressBack() {
+    _playPause();
+    Navigator.pop(context);
+  }
+
   @override
   void dispose() {
     _audioPlayer.dispose();
@@ -83,7 +88,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.pop(context),
+          onPressed: _pressBack,
         ),
       ),
       body: Column(
