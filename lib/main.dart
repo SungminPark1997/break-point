@@ -191,7 +191,12 @@ class _MP3PlayerScreenState extends State<MP3PlayerScreen> {
 
   void _play(File file) {
     setState(() {
-      if (!_recentlyPlayed.contains(file)) _recentlyPlayed.add(file);
+      if (!_recentlyPlayed.contains(file)) {
+        _recentlyPlayed.insert(0, file);
+      } else {
+        _recentlyPlayed.remove(file);
+        _recentlyPlayed.insert(0, file);
+      }
     });
     Navigator.push(
       context,
