@@ -1,25 +1,41 @@
+import 'package:breakpoint/mp3player_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MP3PlayerApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MP3PlayerApp extends StatelessWidget {
+  const MP3PlayerApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Break Point',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
+      title: 'MP3 Player',
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.black,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: Colors.black,
+          secondary: Colors.red,
         ),
-        home: const Scaffold(
-            backgroundColor: Color(
-              0xFF181818,
-            ),
-            body: Column()));
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.black,
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+          ),
+        ),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(color: Colors.black),
+          bodyMedium: TextStyle(color: Colors.black),
+        ),
+        iconTheme: const IconThemeData(color: Colors.red),
+        buttonTheme: const ButtonThemeData(
+          buttonColor: Colors.red,
+        ),
+        dividerColor: Colors.black12,
+      ),
+      home: const MP3PlayerScreen(),
+    );
   }
 }
